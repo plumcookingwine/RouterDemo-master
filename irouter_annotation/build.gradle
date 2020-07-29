@@ -1,5 +1,13 @@
 apply plugin: 'java-library'
 
+ext {
+    bintrayName = 'irouter-annotation'
+    artifact = bintrayName
+    libraryName = 'IRouter annotation'
+    libraryDescription = 'The annotation used in irouter api'
+    libraryVersion = irouter_annotation_version
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -12,3 +20,6 @@ tasks.withType(JavaCompile) {
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
+
+apply from: '../install.gradle'
+apply from: '../bintray.gradle'

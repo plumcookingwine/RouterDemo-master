@@ -42,4 +42,5 @@ dependencies {
     implementation project(path: ':common')
 
     annotationProcessor project(':irouter_compiler')
+    //annotationProcessor 'com.plumcookingwine:irouter_compiler:1.0.0'
 }

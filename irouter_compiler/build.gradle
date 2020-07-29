@@ -1,5 +1,13 @@
 apply plugin: 'java-library'
 
+ext {
+    bintrayName = 'irouter-compiler'
+    artifact = bintrayName
+    libraryName = 'IRouter compiler'
+    libraryDescription = 'A compiler for IRouter to find route'
+    libraryVersion = irouter_main_version
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -20,3 +28,6 @@ tasks.withType(JavaCompile) {
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
+
+apply from: '../install.gradle'
+apply from: '../bintray.gradle'
