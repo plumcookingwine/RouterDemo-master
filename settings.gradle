@@ -1,0 +1,8 @@
+rootProject.name='RouterDemo-master'
+include ':app'
+include ':user'
+include ':order'
+include ':common'
+include ':irouter_api'
+include ':irouter_annotation'
+include ':irouter_compiler'
